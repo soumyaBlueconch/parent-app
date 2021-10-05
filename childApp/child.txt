@@ -5,6 +5,20 @@ step 2 : add the remote child-repo
 cd parent-app;
 git remote add -f childApp https://github.com/soumyaBlueconch/child-app.git
 
-step: create a sub tree
+step 3: create a sub tree
 git subtree add --prefix <ur childs prefix that u will use> <destination folder> <branch> <--squash: to keep the childs commits>
 git subtree add --prefix childApp childApp master --squash
+
+step 4: make changes to the child repo 
+step 5 : cd to the child repo
+cd childApp
+
+step 6:git add files and git commit then git push
+git add child.txt && git commit -m "added a new file form parent repo";
+
+step 7: push the subtree to remote 
+cd ..
+git push origin
+
+step 8:push changes to child repo
+git subtree push --prefix childApp childApp master
