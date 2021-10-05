@@ -22,3 +22,8 @@ git push origin
 
 step 8:push changes to child repo
 git subtree push --prefix childApp childApp master
+
+
+if pull is needed
+cd toParentDirectory
+git subtree add --prefix childApp childApp master --squash
