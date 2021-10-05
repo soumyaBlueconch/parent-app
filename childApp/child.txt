@@ -1,0 +1,10 @@
+step 1 : git clone ur parent app
+git clone https://github.com/soumyaBlueconch/parent-app.git
+
+step 2 : add the remote child-repo
+cd parent-app;
+git remote add -f childApp https://github.com/soumyaBlueconch/child-app.git
+
+step: create a sub tree
+git subtree add --prefix <ur childs prefix that u will use> <destination folder> <branch> <--squash: to keep the childs commits>
+git subtree add --prefix childApp childApp master --squash
